@@ -28,7 +28,7 @@ Execute o comando para criar o executavel da api:
 
 \> go build myRest.go
 
-Para execute o programa basta digitar o nome do executável:
+Para executar o programa basta digitar o nome do executável:
 
 \> myRest.exe
 
@@ -60,5 +60,5 @@ Observações:
 
     Este programa lida apenas com estruturas simples que possuam apenas INT, STRING e FLOAT.
 
-    3 Objetos iniciar são gerados automaticamente. É recomendável alterar seus parâmetros.
+    3 Objetos iniciais são gerados automaticamente. É recomendável alterar seus parâmetros.
 
