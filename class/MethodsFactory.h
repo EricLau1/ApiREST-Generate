@@ -208,15 +208,6 @@ class MethodsFactory {
 			method += listStruct[0];
 			method += ".Id == id {\n";
 			
-			method += "\n";
-			method += "\t\t\t";
-			method += listStruct;
-			method += " = append(";
-			method += listStruct;
-			method += "[:index], ";
-			method += listStruct;
-			method += "[index + 1:]...)";
-			method += "\n\n";
 			
 			method += "\t\t\t";
 			method += "var ";
@@ -233,16 +224,13 @@ class MethodsFactory {
 			
 			method += "\t\t\t";
 			method += listStruct;
-			method += " = append(";
-			method += listStruct;
-			method += ", ";
+			method += "[index] = ";
 			method += listStruct[0];
-			method += ")";
 			
 			method += "\n";
 			method += "\t\t\t";
 			method += "json.NewEncoder(w).Encode(";
-			method += listStruct[0];
+			method += listStruct;
 			method += ")\n";
 			method += "\t\t\treturn\n";
 			

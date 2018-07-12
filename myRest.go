@@ -113,13 +113,10 @@ func putUser(w http.ResponseWriter, r *http.Request) {
 
 	for index,u := range users {
 		if u.Id == id {
-
-			users = append(users[:index], users[index + 1:]...)
-
 			var u User
 			_ = json.NewDecoder(r.Body).Decode(&u)
-			users = append(users, u)
-			json.NewEncoder(w).Encode(u)
+			users[index] = u
+			json.NewEncoder(w).Encode(users)
 			return
 
 		}
